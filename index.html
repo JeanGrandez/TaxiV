@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Vergara</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-blue-600 text-white">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="text-xl font-bold">Taxi Vergara</div>
+        <!-- Botón hamburguesa para móviles -->
+        <button id="menu-toggle" class="block lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <!-- Menú de navegación -->
+        <ul id="menu" class="hidden lg:flex lg:space-x-4 lg:items-center">
+            <li><a href="#inicio" class="hover:text-blue-200">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-blue-200">Nosotros</a></li>
+            <li><a href="#tours" class="hover:text-blue-200">Tours</a></li>
+            <li><a href="#contacto" class="hover:text-blue-200">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Inicio -->
+<section id="inicio" class="relative h-screen">
+    <img src="assets/inicio.jpg" alt="Turismo" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h1 class="text-white text-5xl font-bold text-center">Viajemos juntos con Taxi Vergara</h1>
+    </div>
+</section>
+
+<!-- Nosotros -->
+<section id="nosotros" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 flex flex-wrap items-center">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <h2 class="text-3xl font-bold mb-4">Sobre Nosotros</h2>
+            <p class="text-lg mb-4">
+                Taxi Vergara ofrece un servicio de turismo privado y taxi personal para traslados.
+                Brindamos experiencias únicas, asegurando comodidad, seguridad y un servicio de primera clase.
+            </p>
+        </div>
+        <div class="w-full md:w-1/2">
+            <video controls class="w-full rounded-lg shadow-lg">
+                <source src="assets/video.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- Tours -->
+<section id="tours" class="carousel-container">
+    <h2 class="carousel-title">Nuestros Tours</h2>
+    <div class="carousel relative">
+        <!-- Botón de retroceso -->
+        <button
+                class="carousel-btn prev z-10 absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-4 hover:bg-opacity-80">
+            &#10094;
+        </button>
+
+        <!-- Pista del carrusel -->
+        <div class="carousel-track flex">
+            <div class="carousel-item" data-place="Playa">
+                <img src="assets/playa.png" alt="Playa">
+                <h3>Playa</h3>
+                <p>Disfruta de las hermosas playas.</p>
+                <button onclick="selectTour('Playa')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="La Mina">
+                <img src="assets/mina.jpg" alt="La Mina">
+                <h3>La Mina</h3>
+                <p>Explora la fascinante historia minera.</p>
+                <button onclick="selectTour('La Mina')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Chaco">
+                <img src="assets/chaco.jpg" alt="Chaco">
+                <h3>Chaco</h3>
+                <p>Sumérgete en la tranquilidad de Chaco.</p>
+                <button onclick="selectTour('Chaco')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Virgen del Carmen">
+                <img src="assets/virgen-carmen.jpg" alt="Virgen del Carmen">
+                <h3>Virgen del Carmen</h3>
+                <p>Visita la Virgen del Carmen y su historia.</p>
+                <button onclick="selectTour('Virgen del Carmen')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Llumanque">
+                <img src="assets/llumaque.jpg" alt="Llumanque">
+                <h3>Llumanque</h3>
+                <p>Descubre la belleza natural de Llumanque.</p>
+                <button onclick="selectTour('Llumanque')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Lurinchincha">
+                <img src="assets/lurinchincha.jpg" alt="Lurinchincha">
+                <h3>Lurinchincha</h3>
+                <p>Vive la aventura en Lurinchincha.</p>
+                <button onclick="selectTour('Lurinchincha')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Violetas">
+                <img src="assets/violetas.jpg" alt="Violetas">
+                <h3>Violetas</h3>
+                <p>Admira los paisajes de Violetas.</p>
+                <button onclick="selectTour('Violetas')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Socorro">
+                <img src="assets/socorro.jpg" alt="Socorro">
+                <h3>Socorro</h3>
+                <p>Escapa a la tranquilidad de Socorro.</p>
+                <button onclick="selectTour('Socorro')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Totoritas">
+                <img src="assets/totoritas.jpg" alt="Totoritas">
+                <h3>Totoritas</h3>
+                <p>Explora Totoritas con estilo.</p>
+                <button onclick="selectTour('Totoritas')">Reservar</button>
+            </div>
+            <div class="carousel-item" data-place="Wakama">
+                <img src="assets/wakama.jpg" alt="Wakama">
+                <h3>Wakama</h3>
+                <p>Relájate en las playas de Wakama.</p>
+                <button onclick="selectTour('Wakama')">Reservar</button>
+            </div>
+        </div>
+
+        <!-- Botón de siguiente -->
+        <button
+                class="carousel-btn next z-10 absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-4 hover:bg-opacity-80">
+            &#10095;
+        </button>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Reserva tu viaje</h2>
+        <form id="contactForm" class="max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Nombre</label>
+                <input type="text" id="name" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="lastName" class="block text-gray-700">Apellido</label>
+                <input type="text" id="lastName" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Correo electrónico</label>
+                <input type="email" id="email" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-gray-700">Teléfono</label>
+                <input type="tel" id="phone" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="date" class="block text-gray-700">Fecha del viaje</label>
+                <input type="date" id="date" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="place" class="block text-gray-700">Lugar</label>
+                <select id="place" class="w-full p-2 border rounded" required>
+                    <option value="" disabled selected>Selecciona un lugar</option>
+                    <option>Playa</option>
+                    <option>La Mina</option>
+                    <option>Llumanque</option>
+                    <option>Chaco</option>
+                    <option>Virgen del Carmen</option>
+                    <option>Lurinchincha</option>
+                    <option>Violetas</option>
+                    <option>Socorro</option>
+                    <option>Totoritas</option>
+                    <option>Wakama</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded">Reservar ahora</button>
+        </form>
+    </div>
+</section>
+
+<script src="js/scr.js"></script>
+
+</body>
+</html>
