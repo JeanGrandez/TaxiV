@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const place = document.getElementById("place").value;
         const date = document.getElementById("date").value;
 
-        const whatsappUrl = `https://wa.me/970848295?text=Hola Sr. Frank, soy ${name} ${lastName}, estoy interesado en un viaje a ${place} el ${date}.`;
+        const whatsappUrl = `https://wa.me/956518586?text=Hola Sr. Frank, soy ${name} ${lastName}, estoy interesado en un viaje a ${place} el ${date}.`;
         window.open(whatsappUrl, "_blank");
     });
 
